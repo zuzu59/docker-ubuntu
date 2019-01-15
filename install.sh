@@ -1,24 +1,24 @@
 #Petit script pour lancer le binz
-#zf181219.1435
+#zf190115.1650
 
 docker build -t "docker-ubuntu-zf" .
-docker run -d -i -v `pwd`:/root/work --name="docker-ubuntu" docker-ubuntu-zf
 
 
 echo -e "
 
+Image docker-ubuntu-zf construite !
 
-Après il faut faire:
+Après si on a besoin, il faut démarrer le containe avec:
+docker run -d -i -v `pwd`:/root/work --name="docker-ubuntu" docker-ubuntu-zf
 
+ensuite pour entrer dans le container il faut faire:
 docker exec -it docker-ubuntu /bin/bash
 
-puis à l'intérieur du container:
-
-./test1.sh
-
 ou directement ceci:
+docker exec -it docker-ubuntu /bin/bash commande_a_tourner
 
-docker exec -it docker-ubuntu /bin/bash /root/work/test1.sh
+et pour enlever le container il faut faire:
+docker container rm -f -v docker-ubuntu
 
 
 "
