@@ -1,4 +1,4 @@
-#zf190115.1639
+#zf190115.1749
 
 FROM ubuntu:bionic
 
@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -yq \
     git \
     unzip \
     jq \
+    bc \
     curl \
     htop \
     nano
