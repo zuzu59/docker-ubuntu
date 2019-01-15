@@ -1,4 +1,4 @@
-#zf181219.1435
+#zf190115.1639
 
 FROM ubuntu:bionic
 
@@ -8,6 +8,12 @@ ENV TZ=Europe/Zurich
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && apt-get install -yq \
+    tzdata \
+    sudo \
+    git \
+    unzip \
+    jq \
+    curl \
     htop \
     nano
 
