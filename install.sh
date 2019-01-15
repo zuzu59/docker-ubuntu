@@ -1,5 +1,5 @@
 #Petit script pour lancer le binz
-#zf190115.1650
+#zf190115.1744
 
 docker build -t "docker-ubuntu-zf" .
 
@@ -8,7 +8,7 @@ echo -e "
 
 Image docker-ubuntu-zf construite !
 
-Après si on a besoin, il faut démarrer le containe avec:
+Après si on a besoin, il faut démarrer le container avec:
 docker run -d -i -v `pwd`:/root/work --name="docker-ubuntu" docker-ubuntu-zf
 
 ensuite pour entrer dans le container il faut faire:
